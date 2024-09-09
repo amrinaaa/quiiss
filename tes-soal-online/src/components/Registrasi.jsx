@@ -3,6 +3,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import { auth } from '../Firebase';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { getFirestore, doc, setDoc } from 'firebase/firestore';
+import gambar1 from '../assets/elips.png'; 
+import gambar2 from '../assets/bro.png';
 
 const Registrasi = () => {
   const [nama, setNama] = useState('');
@@ -35,12 +37,30 @@ const Registrasi = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
-      <div className="w-full max-w-md p-8 bg-white shadow-md rounded-lg">
-        <h2 className="text-2xl font-bold mb-6 text-center text-primary">Registrasi</h2>
+    <div className="relative min-h-screen flex items-center bg-white">
+      <div
+        style={{
+          backgroundImage: `url(${gambar1})`,
+          backgroundPosition: 'right',
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: '350px auto',
+        }}
+        className="absolute inset-0 bg-cover bg-no-repeat"
+      />
+      <div
+        style={{
+          backgroundImage: `url(${gambar2})`,
+          backgroundPosition: 'right',
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: '400px auto',
+        }}
+        className="absolute inset-0 bg-cover bg-no-repeat"
+      />
+      <div className="absolute top-1/2 left-0 transform -translate-y-1/2 w-full max-w-md p-8 bg-secondary shadow-md rounded-lg ml-20">
+      <h2 className="text-2xl font-bold mb-6 text-black">Registrasi</h2>
         <form className="space-y-4" onSubmit={handleSubmit}>
         <div>
-            <label htmlFor='nama' className="block text-sm font-medium text-gray-700">Nama:</label>
+            <label htmlFor='nama' className="block text-sm font-medium text-black">Nama:</label>
             <input 
               type="text" 
               id="nama"
@@ -50,7 +70,7 @@ const Registrasi = () => {
             />
           </div>
           <div>
-            <label htmlFor='email' className="block text-sm font-medium text-gray-700">Email:</label>
+            <label htmlFor='email' className="block text-sm font-medium text-black">Email:</label>
             <input 
               type="text" 
               id="email"
@@ -60,7 +80,7 @@ const Registrasi = () => {
             />
           </div>
           <div>
-            <label htmlFor='password' className="block text-sm font-medium text-gray-700">Password:</label>
+            <label htmlFor='password' className="block text-sm font-medium text-black">Password:</label>
             <input
               type="password"
               id="password"
@@ -70,7 +90,7 @@ const Registrasi = () => {
             />
           </div>
           <div>
-            <label htmlFor="nomorHp" className="block text-sm font-medium text-gray-700">Nomor HP:</label>
+            <label htmlFor="nomorHp" className="block text-sm font-medium text-black">Nomor HP:</label>
             <input
               type="text"
               id="nomorHp"
@@ -81,11 +101,11 @@ const Registrasi = () => {
           </div>
           <button 
             type="submit" 
-            className="w-full bg-primary text-white py-2 px-4 rounded-md shadow-sm hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
+            className="w-full bg-green text-black py-2 px-4 rounded-md shadow-sm hover:bg-green-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black">
             Daftar
           </button>
           <p className="text-center mt-4 text-sm">
-            Sudah memiliki akun? <Link to="/login" className="text-primary hover:underline">Masuk</Link>
+            Sudah memiliki akun? <Link to="/login" className="text-black font-bold hover:underline">Masuk</Link>
           </p>
         </form>
       </div>
