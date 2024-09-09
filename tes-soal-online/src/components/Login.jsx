@@ -24,11 +24,20 @@ const Login = () => {
 
       if (userDoc.exists()) {
         const userData = userDoc.data();
+        const role = userData.role;
+
         console.log("Data Pengguna:", userData);
         // Arahkan pengguna ke halaman beranda atau halaman yang diinginkan setelah login
         console.log("Login Berhasil")
 
-        navigate('/home')
+        if (role === 'admin') {
+          navigate('/dashboard/admin');
+          } else if (role === 'author'){
+            navigate('/dashboard/author');
+            }else {
+              navigate('/dashboard/user');
+        }
+
       } else {
         console.error("Tidak ada data pengguna");
       }

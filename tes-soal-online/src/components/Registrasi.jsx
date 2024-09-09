@@ -10,7 +10,7 @@ const Registrasi = () => {
   const [nama, setNama] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [nomor_hp, setNomor_hp] = useState('');
+  const [role, setRole] = useState('user');
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -25,7 +25,7 @@ const Registrasi = () => {
       await setDoc(doc(db, 'users', user.uid), {
         nama,
         email,
-        nomor_hp,
+        role,
       });
 
       console.log("Akun berhasil didaftarkan", user);
@@ -90,14 +90,17 @@ const Registrasi = () => {
             />
           </div>
           <div>
-            <label htmlFor="nomorHp" className="block text-sm font-medium text-black">Nomor HP:</label>
-            <input
-              type="text"
-              id="nomorHp"
-              name="nomorHp"
-              onChange={(e) => setNomor_hp(e.target.value)}
-              className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary sm:text-sm"
-            />
+            <label htmlFor="role" className="block text-sm font-medium text-black">Role:</label>
+            <select
+              id="role"
+              name="role"
+              value={role} // Tambahkan value agar dropdown tetap sinkron dengan state
+              onChange={(e) => setRole(e.target.value)} // Set state role dari dropdown
+              className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary sm:text-sm">
+              <option value="admin">Admin</option>
+              <option value="author">Author</option>
+              <option value="user">Pengguna Biasa</option>
+            </select>
           </div>
           <button 
             type="submit" 
