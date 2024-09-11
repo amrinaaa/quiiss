@@ -4,6 +4,8 @@ import Login from './components/Login';
 import DashboardAdmin from './components/Admin/DashboardAdmin';
 import DashboardUser from './components/Pengguna/DashboardUser';
 import DashboardAuthor from './components/Author/DashboardAuthor';
+import LandingPage from './components/LandingPage/LandingPage';
+import Topik from './components/LandingPage/Topik';
 import './App.css';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
@@ -12,7 +14,7 @@ function App() {
   return (
     <BrowserRouter>
     <Routes>
-      <Route path='/' element={<Registrasi />} />
+    <Route path='/' element={<LandingPage />} />
     <Route path='/registrasi' element={<Registrasi />}></Route>
     <Route path='/login' element={<Login />}></Route>
     <Route path='/dashboard/admin' element={<DashboardAdmin />}></Route>

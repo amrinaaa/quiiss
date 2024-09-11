@@ -4,7 +4,7 @@ import { auth } from '../Firebase';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { getFirestore, doc, setDoc } from 'firebase/firestore';
 import gambar1 from '../assets/elips.png'; 
-import gambar2 from '../assets/bro.png';
+import gambar2 from '../assets/register.png';
 
 const Registrasi = () => {
   const [nama, setNama] = useState('');

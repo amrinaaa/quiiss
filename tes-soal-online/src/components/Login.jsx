@@ -4,7 +4,7 @@ import { auth } from '../Firebase';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { getFirestore, doc, getDoc } from 'firebase/firestore';
 import gambar1 from '../assets/elips.png'; 
-import gambar2 from '../assets/bro.png';
+import gambar2 from '../assets/login.png';
 
 const Login = () => {
   const [email, setEmail] = useState('');
