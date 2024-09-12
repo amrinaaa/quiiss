@@ -13,7 +13,11 @@ export default {
         primary: "#3887a7",          // Warna utama
         secondary: "#c3e8e7",        // Warna sekunder
         'primary-dark': '#0275a7',   // Warna primary lebih gelap
-        green: '#92e2a8',            // Warna hijau tambahan
+        green: '#92e2a8',  
+        biru: '#7BB3B4',  
+        birumuda: '#CFE9E6', 
+        putih: '#ffff',
+        abumuda: '#F1F4F5', // Warna hijau tambahan
       },
       container: {
         center: true,
