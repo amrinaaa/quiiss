@@ -1,10 +1,18 @@
 import React from 'react'
 
+
 const CreateSoal = () => {
   return (
     <div>
-      ffff
+      <h1>Membuat Soal</h1>
+      <optgroup>
+      <label for="soal">Soal</label>
+    </optgroup>
+
+
     </div>
+    
+    
   )
 }
 

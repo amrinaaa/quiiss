@@ -6,6 +6,7 @@ import DashboardUser from './components/Pengguna/DashboardUser';
 import DashboardAuthor from './components/Author/DashboardAuthor';
 import LandingPage from './components/LandingPage/LandingPage';
 import Topik from './components/LandingPage/Topik';
+import CreateSoal from './components/Author/CreateSoal';
 import './App.css';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
@@ -20,6 +21,7 @@ function App() {
     <Route path='/dashboard/admin' element={<DashboardAdmin />}></Route>
     <Route path='/dashboard/user' element={<DashboardUser />}></Route>
     <Route path='/dashboard/author' element={<DashboardAuthor />}></Route>
+    <Route path= '/create-soal' element={<CreateSoal />}></Route>
     </Routes>
     </BrowserRouter>
 
